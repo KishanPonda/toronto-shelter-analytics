@@ -61,12 +61,6 @@ toronto-shelter-analytics/
 ├── dashboard/
 │   └── Toronto_Shelter_Dashboard.pbix   # Power BI dashboard
 │
-├── report/
-│   └── Group_3_Capstone_Final_Report.docx
-│
-├── data/
-│   └── shelter_clean.csv        # Final cleaned dataset
-│
 └── requirements.txt
 </pre>
 
