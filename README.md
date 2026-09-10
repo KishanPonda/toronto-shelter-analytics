@@ -140,19 +140,6 @@ Daily Shelter and Overnight Service Occupancy and Capacity
 - Licence: Open Government Licence — Toronto
 - Link: https://open.toronto.ca/dataset/daily-shelter-overnight-service-occupancy-capacity/
 
-## Team
-
-| Member | Role |
-|--------|------|
-| Kishan Ponda | Engineering & ML Lead |
-| Melissa Moorthy | Project Manager |
-| Haniben Patel | QA & Delivery |
-| Balbina Rosabal | Data Lead |
-| Bhesta Popal | BI & Visualizations |
-
-**Supervisor:** Dr. Salam Ismaeel
-**Institution:** Humber Polytechnic — BIA 5450 Capstone Course
-
 ## License
 
 This project uses publicly available open government data from the 
