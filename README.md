@@ -47,26 +47,28 @@ June 2026, the solution delivers:
 
 ## Project Structure
 
+<pre>
 toronto-shelter-analytics/
 │
 ├── notebooks/
-│ ├── phase1_clean.ipynb # Data cleaning pipeline
-│ ├── phase2_mysql.ipynb # MySQL load and view creation
-│ └── phase3_forecast.ipynb # Prophet forecasting model
+│   ├── phase1_clean.ipynb       # Data cleaning pipeline
+│   ├── phase2_mysql.ipynb       # MySQL load and view creation
+│   └── phase3_forecast.ipynb    # Prophet forecasting model
 │
 ├── sql/
-│ └── shelter_db.sql # Database setup and queries
+│   └── shelter_db.sql           # Database setup and queries
 │
 ├── dashboard/
-│ └── Toronto_Shelter_Dashboard.pbix # Power BI dashboard
+│   └── Toronto_Shelter_Dashboard.pbix   # Power BI dashboard
 │
 ├── report/
-│ └── Group_3_Capstone_Final_Report.docx
+│   └── Group_3_Capstone_Final_Report.docx
 │
 ├── data/
-│ └── shelter_clean.csv # Final cleaned dataset
+│   └── shelter_clean.csv        # Final cleaned dataset
 │
 └── requirements.txt
+</pre>
 
 ## How to Run
 
