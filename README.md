@@ -46,3 +46,115 @@ June 2026, the solution delivers:
 | DBeaver | Database validation and querying |
 
 ## Project Structure
+
+toronto-shelter-analytics/
+│
+├── notebooks/
+│ ├── phase1_clean.ipynb # Data cleaning pipeline
+│ ├── phase2_mysql.ipynb # MySQL load and view creation
+│ └── phase3_forecast.ipynb # Prophet forecasting model
+│
+├── sql/
+│ └── shelter_db.sql # Database setup and queries
+│
+├── dashboard/
+│ └── Toronto_Shelter_Dashboard.pbix # Power BI dashboard
+│
+├── report/
+│ └── Group_3_Capstone_Final_Report.docx
+│
+├── data/
+│ └── shelter_clean.csv # Final cleaned dataset
+│
+└── requirements.txt
+
+## How to Run
+
+### Prerequisites
+- Python 3.8+
+- MySQL 8.0
+- Power BI Desktop
+- MySQL ODBC 8.0 Connector
+
+### Setup
+
+**1. Install Python dependencies**
+```bash
+pip install -r requirements.txt
+```
+
+**2. Run the cleaning pipeline**
+
+Open and run all cells in `notebooks/phase1_clean.ipynb`
+
+This produces `shelter_clean.csv` — 274,486 rows, 34 columns.
+
+**3. Set up MySQL database**
+
+```sql
+CREATE DATABASE IF NOT EXISTS shelter_db;
+```
+
+Then run all cells in `notebooks/phase2_mysql.ipynb`
+
+This loads the data and creates 3 analytical views:
+- `vw_equity_gap`
+- `vw_operator_benchmark`
+- `vw_at_risk_programs`
+
+**4. Run the forecasting model**
+
+Open and run all cells in `notebooks/phase3_forecast.ipynb`
+
+This trains Prophet models per sector and writes 300 forecast rows 
+to MySQL.
+
+**5. Open the dashboard**
+
+Open `dashboard/Toronto_Shelter_Dashboard.pbix` in Power BI Desktop.
+
+Configure your MySQL ODBC DSN named `ShelterDB` pointing to 
+`localhost:3306/shelter_db`, then click Refresh.
+
+### Password Setup
+
+Never hardcode your MySQL password. When prompted in the notebooks:
+- Type your password when the `input()` prompt appears, OR
+- Set an environment variable before running:
+
+```bash
+# Windows
+set MYSQL_PASSWORD=your_password
+
+# Mac/Linux
+export MYSQL_PASSWORD=your_password
+```
+
+## Data Source
+
+**City of Toronto Open Data Portal**
+Daily Shelter and Overnight Service Occupancy and Capacity
+
+- Publisher: Toronto Shelter and Support Services (TSSS)
+- Source system: SMIS (Shelter Management Information System)
+- Licence: Open Government Licence — Toronto
+- Link: https://open.toronto.ca/dataset/daily-shelter-overnight-service-occupancy-capacity/
+
+## Team
+
+| Member | Role |
+|--------|------|
+| Kishan Ponda | Engineering & ML Lead |
+| Melissa Moorthy | Project Manager |
+| Haniben Patel | QA & Delivery |
+| Balbina Rosabal | Data Lead |
+| Bhesta Popal | BI & Visualizations |
+
+**Supervisor:** Dr. Salam Ismaeel
+**Institution:** Humber Polytechnic — BIA 5450 Capstone Course
+
+## License
+
+This project uses publicly available open government data from the 
+City of Toronto. Code is available for educational and research 
+purposes.
